@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int average(float* x,int A[])
+{
+	int z = A[0]; //smallest
+	int y = A[0]; //greatest
+	for (int i = 0; i < 6; i++)
+		if (A[i] > z)
+			z=A[i];
+	for (int i = 0; i < 6; i++)
+		if (A[i] < y)
+			y=A[i];
+
+	*x = float (z + y) / 2;
+	return *x;
+};
+int main()
+{
+	int values[] = { 5,9,7,10,8,6 };
+	float a;
+
+	average(&a, values);
+	cout << "\nThe average of maximum and minimum numberx is " << a << endl;
+
+}
