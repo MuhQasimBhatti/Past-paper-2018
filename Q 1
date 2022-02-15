@@ -1,0 +1,26 @@
+
+
+#include<iostream>
+using namespace std;
+
+void convert_in_words(int num)
+{
+	int x = num % 1000;
+	int y = num % 100;
+	int z = num % 10;
+	cout << num / 1000 << " Thousand, " << x / 100 << " Hundred, " << y / 10 << " Ten and " << z << endl;
+}
+
+int main()
+{
+	int num;
+	cout << "Enter number Should be min and max 4 digit,e.g. 4567" << endl;
+	cin >> num;
+
+	convert_in_words(num);
+
+
+
+}
+
+
